@@ -1,0 +1,203 @@
+{
+    "stocks": [
+      {
+        "ticker": "TCS",
+        "last_trade_price": 3405.10,
+        "data": [
+          { "volume": 190, "bid": 3404.50, "ask": 3401.60, "bid_volume": 192, "ask_volume": 136 },
+          { "volume": 140, "bid": 3403.75, "ask": 3403.00, "bid_volume": 143, "ask_volume": 166 },
+          { "volume": 170, "bid": 3403.00, "ask": 3404.00, "bid_volume": 173, "ask_volume": 217 },
+          { "volume": 180, "bid": 3402.50, "ask": 3405.00, "bid_volume": 182, "ask_volume": 125 },
+          { "volume": 150, "bid": 3401.00, "ask": 3405.10, "bid_volume": 153, "ask_volume": 208 }
+        ]
+      },
+      {
+        "ticker": "IBM",
+        "last_trade_price": 145.25,
+        "data": [
+          { "volume": 670, "bid": 145.15, "ask": 145.25, "bid_volume": 673, "ask_volume": 618 },
+          { "volume": 660, "bid": 145.05, "ask": 145.30, "bid_volume": 663, "ask_volume": 628 },
+          { "volume": 650, "bid": 145.00, "ask": 145.35, "bid_volume": 653, "ask_volume": 638 },
+          { "volume": 640, "bid": 144.95, "ask": 145.50, "bid_volume": 643, "ask_volume": 606 },
+          { "volume": 600, "bid": 144.90, "ask": 145.60, "bid_volume": 602, "ask_volume": 698 }
+        ]
+      },
+      {
+        "ticker": "TATA",
+        "last_trade_price": 601.00,
+        "data": [
+          { "volume": 390, "bid": 601.25, "ask": 600.10, "bid_volume": 393, "ask_volume": 348 },
+          { "volume": 360, "bid": 601.00, "ask": 600.75, "bid_volume": 363, "ask_volume": 305 },
+          { "volume": 350, "bid": 600.75, "ask": 601.00, "bid_volume": 353, "ask_volume": 368 },
+          { "volume": 330, "bid": 600.50, "ask": 602.00, "bid_volume": 333, "ask_volume": 327 },
+          { "volume": 370, "bid": 600.00, "ask": 602.50, "bid_volume": 373, "ask_volume": 316 }
+        ]
+      },
+      {
+        "ticker": "TSLA",
+        "last_trade_price": 721.00,
+        "data": [
+          { "volume": 480, "bid": 722.00, "ask": 720.60, "bid_volume": 483, "ask_volume": 478 },
+          { "volume": 500, "bid": 721.50, "ask": 720.75, "bid_volume": 503, "ask_volume": 498 },
+          { "volume": 510, "bid": 721.10, "ask": 721.00, "bid_volume": 513, "ask_volume": 488 },
+          { "volume": 520, "bid": 720.75, "ask": 721.50, "bid_volume": 523, "ask_volume": 508 },
+          { "volume": 530, "bid": 720.50, "ask": 722.00, "bid_volume": 533, "ask_volume": 457 }
+        ]
+      },
+      {
+        "ticker": "AAPL",
+        "last_trade_price": 175.25,
+        "data": [
+          { "volume": 230, "bid": 175.45, "ask": 175.00, "bid_volume": 233, "ask_volume": 157 },
+          { "volume": 220, "bid": 175.30, "ask": 175.10, "bid_volume": 223, "ask_volume": 165 },
+          { "volume": 170, "bid": 175.20, "ask": 175.25, "bid_volume": 173, "ask_volume": 178 },
+          { "volume": 200, "bid": 175.00, "ask": 175.40, "bid_volume": 203, "ask_volume": 198 },
+          { "volume": 180, "bid": 175.00, "ask": 175.55, "bid_volume": 183, "ask_volume": 248 }
+        ]
+      },
+      {
+        "ticker": "GOOGL",
+        "last_trade_price": 2800.75,
+        "data": [
+          { "volume": 970, "bid": 2800.50, "ask": 2799.50, "bid_volume": 973, "ask_volume": 938 },
+          { "volume": 930, "bid": 2800.25, "ask": 2799.75, "bid_volume": 933, "ask_volume": 978 },
+          { "volume": 960, "bid": 2800.00, "ask": 2800.00, "bid_volume": 963, "ask_volume": 907 },
+          { "volume": 950, "bid": 2799.75, "ask": 2800.25, "bid_volume": 953, "ask_volume": 968 },
+          { "volume": 920, "bid": 2799.50, "ask": 2800.50, "bid_volume": 923, "ask_volume": 918 }
+        ]
+      },
+      {
+        "ticker": "AMZN",
+        "last_trade_price": 3450.10,
+        "data": [
+          { "volume": 2020, "bid": 3449.90, "ask": 3450.10, "bid_volume": 2023, "ask_volume": 2058 },
+          { "volume": 2030, "bid": 3449.75, "ask": 3450.25, "bid_volume": 2033, "ask_volume": 2078 },
+          { "volume": 2000, "bid": 3449.50, "ask": 3450.50, "bid_volume": 2003, "ask_volume": 2048 },
+          { "volume": 2040, "bid": 3449.25, "ask": 3451.00, "bid_volume": 2043, "ask_volume": 2098 },
+          { "volume": 2090, "bid": 3449.00, "ask": 3451.25, "bid_volume": 2093, "ask_volume": 2088 }
+        ]
+      },
+      {
+        "ticker": "NFLX",
+        "last_trade_price": 600.60,
+        "data": [
+          { "volume": 1120, "bid": 600.50, "ask": 599.50, "bid_volume": 1123, "ask_volume": 1118 },
+          { "volume": 1170, "bid": 600.25, "ask": 599.75, "bid_volume": 1173, "ask_volume": 1107 },
+          { "volume": 1160, "bid": 600.00, "ask": 600.00, "bid_volume": 1163, "ask_volume": 1148 },
+          { "volume": 1130, "bid": 599.75, "ask": 600.25, "bid_volume": 1133, "ask_volume": 1188 },
+          { "volume": 1150, "bid": 599.50, "ask": 600.50, "bid_volume": 1153, "ask_volume": 1138 }
+        ]
+      },
+      {
+        "ticker": "RELIANCE",
+        "last_trade_price": 2525.65,
+        "data": [
+          { "volume": 310, "bid": 2525.50, "ask": 2525.75, "bid_volume": 312, "ask_volume": 290 },
+          { "volume": 300, "bid": 2525.25, "ask": 2525.90, "bid_volume": 305, "ask_volume": 280 },
+          { "volume": 280, "bid": 2525.00, "ask": 2526.00, "bid_volume": 285, "ask_volume": 270 },
+          { "volume": 320, "bid": 2524.75, "ask": 2526.25, "bid_volume": 325, "ask_volume": 295 },
+          { "volume": 340, "bid": 2524.50, "ask": 2526.50, "bid_volume": 345, "ask_volume": 310 }
+        ]
+      },
+      {
+        "ticker": "INFY",
+        "last_trade_price": 1498.90,
+        "data": [
+          { "volume": 410, "bid": 1498.75, "ask": 1499.00, "bid_volume": 415, "ask_volume": 400 },
+          { "volume": 390, "bid": 1498.50, "ask": 1499.25, "bid_volume": 395, "ask_volume": 385 },
+          { "volume": 420, "bid": 1498.25, "ask": 1499.50, "bid_volume": 425, "ask_volume": 410 },
+          { "volume": 400, "bid": 1498.00, "ask": 1499.75, "bid_volume": 405, "ask_volume": 395 },
+          { "volume": 430, "bid": 1497.75, "ask": 1500.00, "bid_volume": 435, "ask_volume": 420 }
+        ]
+      },
+      {
+        "ticker": "HDFC",
+        "last_trade_price": 2750.45,
+        "data": [
+          { "volume": 510, "bid": 2750.25, "ask": 2750.75, "bid_volume": 515, "ask_volume": 500 },
+          { "volume": 490, "bid": 2750.00, "ask": 2751.00, "bid_volume": 495, "ask_volume": 480 },
+          { "volume": 520, "bid": 2749.75, "ask": 2751.25, "bid_volume": 525, "ask_volume": 510 },
+          { "volume": 500, "bid": 2749.50, "ask": 2751.50, "bid_volume": 505, "ask_volume": 495 },
+          { "volume": 530, "bid": 2749.25, "ask": 2751.75, "bid_volume": 535, "ask_volume": 520 }
+        ]
+      },
+      {
+        "ticker": "ICICIBANK",
+        "last_trade_price": 940.20,
+        "data": [
+          { "volume": 610, "bid": 940.00, "ask": 940.25, "bid_volume": 615, "ask_volume": 600 },
+          { "volume": 590, "bid": 939.75, "ask": 940.50, "bid_volume": 595, "ask_volume": 580 },
+          { "volume": 620, "bid": 939.50, "ask": 940.75, "bid_volume": 625, "ask_volume": 610 },
+          { "volume": 600, "bid": 939.25, "ask": 941.00, "bid_volume": 605, "ask_volume": 595 },
+          { "volume": 640, "bid": 939.00, "ask": 941.25, "bid_volume": 645, "ask_volume": 620 }
+        ]
+      },
+      {
+        "ticker": "SBIN",
+        "last_trade_price": 592.80,
+        "data": [
+          { "volume": 710, "bid": 592.75, "ask": 593.00, "bid_volume": 715, "ask_volume": 700 },
+          { "volume": 690, "bid": 592.50, "ask": 593.25, "bid_volume": 695, "ask_volume": 680 },
+          { "volume": 720, "bid": 592.25, "ask": 593.50, "bid_volume": 725, "ask_volume": 710 },
+          { "volume": 700, "bid": 592.00, "ask": 593.75, "bid_volume": 705, "ask_volume": 695 },
+          { "volume": 750, "bid": 591.75, "ask": 594.00, "bid_volume": 755, "ask_volume": 730 }
+        ]
+      },
+      {
+        "ticker": "TATAMOTORS",
+        "last_trade_price": 450.55,
+        "data": [
+          { "volume": 810, "bid": 450.50, "ask": 450.75, "bid_volume": 815, "ask_volume": 800 },
+          { "volume": 790, "bid": 450.25, "ask": 451.00, "bid_volume": 795, "ask_volume": 780 },
+          { "volume": 820, "bid": 450.00, "ask": 451.25, "bid_volume": 825, "ask_volume": 810 },
+          { "volume": 800, "bid": 449.75, "ask": 451.50, "bid_volume": 805, "ask_volume": 795 },
+          { "volume": 850, "bid": 449.50, "ask": 451.75, "bid_volume": 855, "ask_volume": 830 }
+        ]
+      },
+      {
+        "ticker": "BHARTIARTL",
+        "last_trade_price": 890.40,
+        "data": [
+          { "volume": 910, "bid": 890.25, "ask": 890.50, "bid_volume": 915, "ask_volume": 900 },
+          { "volume": 890, "bid": 890.00, "ask": 890.75, "bid_volume": 895, "ask_volume": 880 },
+          { "volume": 920, "bid": 889.75, "ask": 891.00, "bid_volume": 925, "ask_volume": 910 },
+          { "volume": 900, "bid": 889.50, "ask": 891.25, "bid_volume": 905, "ask_volume": 895 },
+          { "volume": 950, "bid": 889.25, "ask": 891.50, "bid_volume": 955, "ask_volume": 940 }
+        ]
+      },
+      {
+        "ticker": "WIPRO",
+        "last_trade_price": 432.75,
+        "data": [
+          { "volume": 1010, "bid": 432.50, "ask": 433.00, "bid_volume": 1015, "ask_volume": 1000 },
+          { "volume": 990, "bid": 432.25, "ask": 433.25, "bid_volume": 995, "ask_volume": 980 },
+          { "volume": 1020, "bid": 432.00, "ask": 433.50, "bid_volume": 1025, "ask_volume": 1010 },
+          { "volume": 1000, "bid": 431.75, "ask": 433.75, "bid_volume": 1005, "ask_volume": 995 },
+          { "volume": 1050, "bid": 431.50, "ask": 434.00, "bid_volume": 1055, "ask_volume": 1040 }
+        ]
+      },
+      {
+        "ticker": "HCLTECH",
+        "last_trade_price": 1200.80,
+        "data": [
+          { "volume": 1110, "bid": 1200.75, "ask": 1200.85, "bid_volume": 1115, "ask_volume": 1100 },
+          { "volume": 1130, "bid": 1200.70, "ask": 1200.90, "bid_volume": 1135, "ask_volume": 1120 },
+          { "volume": 1150, "bid": 1200.65, "ask": 1200.95, "bid_volume": 1155, "ask_volume": 1140 },
+          { "volume": 1170, "bid": 1200.60, "ask": 1201.00, "bid_volume": 1175, "ask_volume": 1160 },
+          { "volume": 1190, "bid": 1200.55, "ask": 1201.05, "bid_volume": 1195, "ask_volume": 1180 }
+        ]
+      },
+      {
+        "ticker": "HDFCBANK",
+        "last_trade_price": 1500.90,
+        "data": [
+          { "volume": 1310, "bid": 1500.85, "ask": 1500.95, "bid_volume": 1315, "ask_volume": 1300 },
+          { "volume": 1330, "bid": 1500.80, "ask": 1501.00, "bid_volume": 1335, "ask_volume": 1320 },
+          { "volume": 1350, "bid": 1500.75, "ask": 1501.05, "bid_volume": 1355, "ask_volume": 1340 },
+          { "volume": 1370, "bid": 1500.70, "ask": 1501.10, "bid_volume": 1375, "ask_volume": 1360 },
+          { "volume": 1390, "bid": 1500.65, "ask": 1501.15, "bid_volume": 1395, "ask_volume": 1380 }
+        ]
+      }
+    ]
+  }
+  
