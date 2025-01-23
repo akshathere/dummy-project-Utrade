@@ -5,14 +5,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const index_1 = __importDefault(require("./routes/index"));
+const index_1 = require("./routes/index");
 const error_middleware_1 = __importDefault(require("./middleware/error.middleware"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 const PORT = 3000;
 app.use((0, cors_1.default)());
+app.use(express_1.default.json());
+// app.use('/api/signin',AuthenticeRouter); // Signup route
 // Market depth route
-app.use('/api/stocks', index_1.default); // All stock-related routes
+app.use('/api/stocks', index_1.Router); // All stock-related routes
+app.use('/mm', index_1.DataRouter);
 app.use('/data', express_1.default.static(path_1.default.join(__dirname, '../data.json')));
 // Error handling middleware
 app.use(error_middleware_1.default);

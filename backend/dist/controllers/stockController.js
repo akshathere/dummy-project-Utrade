@@ -15,31 +15,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.StockController = void 0;
 const path_1 = __importDefault(require("path"));
 const promises_1 = __importDefault(require("fs/promises"));
-const StockController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { symbol } = req.params;
-    const priceRange = parseFloat(req.query.priceRange) || 5.50; // Price Range
-    const numOrders = parseInt(req.query.numOrders) || 5; // Number of Buyers/Sellers
-    const maxQuantity = parseInt(req.query.maxQuantity) || 1000; // Max Quantity
-    // Path to the data.json file
-    const dataPath = path_1.default.join(__dirname, '../../data.json');
-    try {
-        // Define the Binance API URL for fetching market data
-        const formattedSymbol = symbol.toUpperCase(); // Ensure compatibility with Binance API
-        const jsonData = yield promises_1.default.readFile(dataPath, 'utf8'); // Read the file as a string
-        const stockData = JSON.parse(jsonData);
-        const response = stockData.stocks.find((stock) => stock.ticker === formattedSymbol);
-        const lastTradePrice = parseFloat(response.last_trade_price);
-        // Calculate the price ranges for generating random buy and sell prices
-        const minBuyPrice = lastTradePrice - priceRange; // Min buy price
-        const maxBuyPrice = lastTradePrice; // Max buy price
-        const minSellPrice = lastTradePrice; // Min sell price
-        const maxSellPrice = lastTradePrice + priceRange; // Max sell price
-        // Generate random buy prices and quantities
-        const buyers = generateRandomOrders(minBuyPrice, maxBuyPrice, numOrders, maxQuantity, 'desc');
-        // Generate random sell prices and quantities
-        const sellers = generateRandomOrders(minSellPrice, maxSellPrice, numOrders, maxQuantity, 'asc');
-        // Respond with the fetched and generated data
-        res.json({
+function generateDataForSymbol(symbol, lastTradePrice) {
+    const priceRange = 5.50; // Price Range
+    const numOrders = 5; // Number of Buyers/Sellers
+    const maxQuantity = 1000; // Max Quantity
+    // Calculate the price ranges for generating random buy and sell prices
+    const minBuyPrice = lastTradePrice - priceRange; // Min buy price
+    const maxBuyPrice = lastTradePrice; // Max buy price
+    const minSellPrice = lastTradePrice; // Min sell price
+    const maxSellPrice = lastTradePrice + priceRange; // Max sell price
+    // Generate random buy prices and quantities
+    const buyers = generateRandomOrders(minBuyPrice, maxBuyPrice, numOrders, maxQuantity, 'desc');
+    // Generate random sell prices and quantities
+    const sellers = generateRandomOrders(minSellPrice, maxSellPrice, numOrders, maxQuantity, 'asc');
+    return ({
+        symbol: symbol,
+        data: {
             lastTradePrice,
             marketDepth: {
                 buyers,
@@ -47,7 +38,24 @@ const StockController = (req, res) => __awaiter(void 0, void 0, void 0, function
             },
             totalBuyersQuantity: calculateTotalQuantity(buyers),
             totalSellersQuantity: calculateTotalQuantity(sellers),
+        }
+    });
+}
+const StockController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    // Path to the data.json file
+    const dataPath = path_1.default.join(__dirname, '../../data.json');
+    const GeneratedStocksData = [];
+    try {
+        // Define the Binance API URL for fetching market data
+        const jsonData = yield promises_1.default.readFile(dataPath, 'utf8'); // Read the file as a string
+        const stockData = JSON.parse(jsonData);
+        stockData.stocks.forEach((stock) => {
+            const ticker = stock.ticker;
+            const lastTradePrice = stock.last_trade_price;
+            GeneratedStocksData.push(generateDataForSymbol(ticker, lastTradePrice));
         });
+        // Respond with the fetched and generated data
+        res.json(GeneratedStocksData);
     }
     catch (error) {
         console.error('Error fetching data from Binance API:', error.message);
