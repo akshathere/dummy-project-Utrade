@@ -1,1 +1,1 @@
-{"root":["./src/server.ts","./src/controllers/datacontroller.ts","./src/controllers/signin.ts","./src/controllers/stockcontroller.ts","./src/middleware/error.middleware.ts","./src/routes/index.ts"],"version":"5.7.3"}
+{"root":["./src/server.ts","./src/controllers/authentication.controller.ts","./src/controllers/data.controller.ts","./src/controllers/stock.controller.ts","./src/controllers/wishlist.controller.ts","./src/middleware/authentication.middleware.ts","./src/middleware/error.middleware.ts","./src/routes/index.ts"],"version":"5.7.3"}

@@ -3,31 +3,34 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql" // Or "mysql"/"sqlite" depending on your DB
+  provider = "postgresql" // Or "mysql"/"sqlite"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id       Int      @id @default(autoincrement())
-  email    String   @unique
-  password String
-  wishlist Wishlist[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        Int        @id @default(autoincrement())
+  username  String     @unique
+  email     String     @unique
+  password  String
+  // A user can have multiple wishlist items, for either wishlist1 or wishlist2
+  wishlists Wishlist[]
 }
 
 model Stock {
-  id       Int      @id @default(autoincrement())
-  symbol   String   @unique
-  name     String
-  wishlist Wishlist[]
+  id        Int        @id @default(autoincrement())
+  symbol    String     @unique
+  name      String
+  // A stock can appear in multiple users' wishlists
+  wishlists Wishlist[]
 }
 
 model Wishlist {
-  id       Int    @id @default(autoincrement())
-  userId   Int
-  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  stockId  Int
-  stock    Stock  @relation(fields: [stockId], references: [id], onDelete: Cascade)
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  stockId   Int
+  stock     Stock    @relation(fields: [stockId], references: [id], onDelete: Cascade)
+  // This field differentiates between “wishlist1” and “wishlist2”
+  type      String   
   createdAt DateTime @default(now())
 }

@@ -49,27 +49,50 @@ function generateDataForSymbol(symbol: string,lastTradePrice : number){
     }
 })
 }
-export const StockController = async (req: Request, res: Response) => {
-    // Path to the data.json file
+
+export const MarketDepthSymbol= async (req: Request , res: Response) => {
+    const {symbol} = req.body
     const dataPath = path.join(__dirname, '../../data.json');
-    const GeneratedStocksData :{ symbol: string; data: MarketDepthData }[]= []
-        try {
-            // Define the Binance API URL for fetching market data
-            const jsonData = await fs.readFile(dataPath, 'utf8'); // Read the file as a string
-            const stockData = JSON.parse(jsonData); 
-            
-            stockData.stocks.forEach((stock :Stock) => {
-                const ticker = stock.ticker;
-                const lastTradePrice = stock.last_trade_price;
-                GeneratedStocksData.push( generateDataForSymbol(ticker,lastTradePrice))
-            });
-            // Respond with the fetched and generated data
-            res.json(GeneratedStocksData);
-        } catch (error: any) {
-            console.error('Error fetching data from Binance API:', error.message);
-            res.status(500).json({ error: 'Failed to fetch data from API', details: error.message });
+    const jsonData = await fs.readFile(dataPath, 'utf8');
+    const stockData = JSON.parse(jsonData); 
+    let ltp
+    for (const stock of stockData.stocks) {
+        if (stock.ticker === symbol) {
+          ltp = stock.last_trade_price;
+          console.log(ltp,symbol)
+          const data= generateDataForSymbol(symbol,ltp)
+          res.json(data)
+          break
+           // Stop the loop once the symbol is found
         }
+      }
+    
 }
+
+
+
+
+// export const StockController = async (req: Request, res: Response) => {
+//     // Path to the data.json file
+//     const dataPath = path.join(__dirname, '../../data.json');
+//     const GeneratedStocksData :{ symbol: string; data: MarketDepthData }[]= []
+//         try {
+//             // Define the Binance API URL for fetching market data
+//             const jsonData = await fs.readFile(dataPath, 'utf8'); // Read the file as a string
+//             const stockData = JSON.parse(jsonData); 
+            
+//             stockData.stocks.forEach((stock :Stock) => {
+//                 const ticker = stock.ticker;
+//                 const lastTradePrice = stock.last_trade_price;
+//                 GeneratedStocksData.push( generateDataForSymbol(ticker,lastTradePrice))
+//             });
+//             // Respond with the fetched and generated data
+//             res.json(GeneratedStocksData);
+//         } catch (error: any) {
+//             console.error('Error fetching data from Binance API:', error.message);
+//             res.status(500).json({ error: 'Failed to fetch data from API', details: error.message });
+//         }
+// }
 
 function generateRandomOrders(minPrice: number, maxPrice: number, numOrders: number, maxQuantity: number, sortOrder: string) {
     const orders = [];
